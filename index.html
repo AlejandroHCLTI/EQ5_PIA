@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiley Crown Dental Clinic</title>
+    <link rel="stylesheet" href="assets/paginaprincipal.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-container">
+        <div class="logo-title">
+            <img src="assets/img/logo.png" alt="Logo de la clínica" class="logo">
+            <h1 class="sucursal">Smiley Crown Dental Clinic</h1>
+        </div>
+        <div class="header-buttons">
+            <button id="darkModeBtn">Modo Oscuro</button>
+            <button id="loginBtn">Iniciar Sesión</button>
+        </div>
+    </header>
+
+    <!-- Menú -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Agendar Cita</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Carrusel -->
+    <section class="carousel">
+        <div class="carousel-slide fade">
+            <img src="assets/img/carrusel1.jpg" alt="Imagen 1">
+        </div>
+        <div class="carousel-slide fade">
+            <img src="assets/img/carrusel2.jpg" alt="Imagen 2">
+        </div>
+        <div class="carousel-slide fade">
+            <img src="assets/img/carrusel3.jpg" alt="Imagen 3">
+        </div>
+    </section>
+
+    <!-- Sección de información -->
+    <section class="info-section">
+        <div class="info-left">
+            <h2>Casos de Pacientes</h2>
+            <p>Mostramos cómo nuestros tratamientos han mejorado la sonrisa y la salud bucal de nuestros pacientes.</p>
+        </div>
+        <div class="info-right">
+            <h2>Por qué escogernos</h2>
+            <p>Contamos con profesionales capacitados, tecnología de punta y un ambiente seguro y cómodo.</p>
+            <h3>Importancia de ir al dentista</h3>
+            <p>Visitar al dentista regularmente previene enfermedades, mejora la salud y mantiene tu sonrisa radiante.</p>
+        </div>
+    </section>
+
+    <!-- Horarios y testimonios -->
+    <section class="schedule-testimonials">
+        <div class="schedule">
+            <h2>Horarios</h2>
+            <p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+            <p>Sábado: 9:00 AM - 2:00 PM</p>
+        </div>
+        <div class="testimonials">
+            <h2>Testimonios</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <img src="assets/img/test1.jpg" alt="Fernando F." class="profile-pic">
+                    <p class="comment">"Excelente atención, muy profesionales y amables."</p>
+                    <p class="name">- Fernando F.</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="assets/img/test2.jpg" alt="Ana L." class="profile-pic">
+                    <p class="comment">"Mi sonrisa nunca había estado mejor, 100% recomendable."</p>
+                    <p class="name">- Ana L.</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="assets/img/test3.jpg" alt="Lucía P." class="profile-pic">
+                    <p class="comment">"Muy contenta con el trato y la calidad del servicio."</p>
+                    <p class="name">- Lucía P.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sucursal -->
+    <section class="location">
+        <h2>Nuestra Sucursal</h2>
+        <p>Av. A Reynosa 417, Tres caminos, 67190 Guadalupe, N.L, Mexico</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28768.24292636075!2d-100.22088292568355!3d25.670288099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c1f35268417b%3A0xbaf43a921aaef47b!2sCl%C3%ADnica%20Dental%20DLA!5e0!3m2!1ses-419!2smx!4v1762397512515!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Clínica Smiley Crown. Todos los derechos reservados.</p>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Modo oscuro
+        const darkModeBtn = document.getElementById('darkModeBtn');
+        darkModeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Carrusel automático
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("carousel-slide");
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 4000);
+        }
+        showSlides();
+    </script>
+</body>
+</html>

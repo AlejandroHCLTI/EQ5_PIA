@@ -1,0 +1,330 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Italianno';
+}
+
+header {
+    position: relative;
+    background-color: #F2F2F2; /* color crema */
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Logo y título centrados */
+.logo-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.sucursal {
+    font-size: 30px;
+    color: #0540F2;
+    margin-top: 10px;
+}
+
+/* Botones en esquina superior derecha */
+.header-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons button {
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #056CF2; /* azul vibrante */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.header-buttons button:hover {
+    background-color: #0554F2; /* azul medio */
+}
+
+/* Menú pegado al carrusel */
+nav {
+    background-color: #0540F2; /* azul oscuro */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #F2F2F2;
+    font-weight: bold;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #6B98F2; /* azul claro */
+}
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sección de información */
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    gap: 20px;
+    background-color: #F2F2F2;
+}
+
+.info-left, .info-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-left h2, .info-right h2 {
+    margin-bottom: 10px;
+    color: #006eff; /* azul vibrante */
+}
+
+.info-left p, .info-right p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Horarios y testimonios */
+.schedule-testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #02005d;
+    padding: 40px 20px;
+    gap: 20px;
+    color: #F2F2F2;
+}
+
+.schedule {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.schedule h2 {
+    margin-bottom: 15px;
+    color: #0540F2;
+}
+
+.schedule p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.testimonials {
+    flex: 1;
+    min-width: 300px;
+    padding: 2rem;
+    background-color: #fdf6f0; /* color crema suave */
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #009dff;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.8rem;
+    border: 2px solid #2b00ff;
+}
+
+.comment {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    font-weight: bold;
+    color: #02008a;
+}
+
+/* Sucursal */
+.location {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F2F2F2;
+}
+
+.location h2 {
+    color: #056CF2;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #0540F2;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social a {
+    color: #F2F2F2;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    color: #6B98F2;
+}
+
+/* Modo oscuro completo */
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-mode header {
+    background-color: #111111;
+}
+
+.dark-mode nav {
+    background-color: #001f3f;
+}
+
+.dark-mode .menu li a {
+    color: #ffffff;
+}
+
+.dark-mode .menu li a:hover {
+    color: #ffffff;
+}
+
+.dark-mode .sucursal {
+    color: #ffffff;
+}
+
+.dark-mode .info-section {
+    background-color: #111111;
+}
+
+.dark-mode .info-left p,
+.dark-mode .info-right p {
+    color: #dddddd;
+}
+
+.dark-mode .schedule-testimonials {
+    background-color: #001f3f;
+}
+
+.dark-mode .schedule h2 {
+    color: #0d00ff;
+}
+
+.dark-mode .schedule p {
+    color: #ffffff;
+}
+
+.dark-mode .testimonials {
+    background-color: #111111;
+}
+
+.dark-mode .testimonials h2 {
+    color: #00bfff;
+}
+
+.dark-mode .testimonial-card {
+    background-color: #222222;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+.dark-mode .comment {
+    color: #cccccc;
+}
+
+.dark-mode .name {
+    color: #ffffff;
+}
+
+.dark-mode .location {
+    background-color: #111111;
+}
+
+.dark-mode .location h2 {
+    color: #00bfff;
+}
+
+.dark-mode footer {
+    background-color: #001f3f;
+}
