@@ -120,30 +120,80 @@
 
     <!-- SECCIÓN FQA -->
     <section id="fqa" class="section blue-bg fade-in">
-      <h2>Preguntas Frecuentes</h2>
-      <div class="testimonios">
-        <div class="card">
-          <p>
-            <strong>¿Cuál es el horario de atención del consultorio?</strong><br/>
-            Lunes a Viernes: 9:00 AM - 7:00 PM<br/>
-            Sábado: 9:00 AM - 2:00 PM
-          </p>
-        </div>
-        <div class="card">
-          <p>
-            <strong>¿Hay entretenimiento o material para niños?</strong><br/>
-            Sí, contamos con un área recreativa para niños y niñas.
-          </p>
-        </div>
-        <div class="card">
-          <p>
-            <strong>Tiempo máximo de espera</strong><br />
-            Normalmente la atención es inmediata, pero puede haber esperas de 10
-            a 15 minutos dependiendo del dentista.
-          </p>
-        </div>
+  <h2>Preguntas Frecuentes</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Cuál es el horario de atención del consultorio?
+      </button>
+      <div class="faq-answer">
+        <p>
+          Lunes a Viernes: 9:00 AM - 7:00 PM<br />
+          Sábado: 9:00 AM - 2:00 PM
+        </p>
       </div>
-    </section>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Hay entretenimiento o material para niños?
+      </button>
+      <div class="faq-answer">
+        <p>
+          Sí, contamos con un área recreativa con juegos y materiales didácticos
+          para niños y niñas.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">¿Cuál es el tiempo máximo de espera?</button>
+      <div class="faq-answer">
+        <p>
+          Normalmente la atención es inmediata, pero puede haber esperas de 10 a
+          15 minutos dependiendo del dentista.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">¿A qué edad es  bueno acudir al odontólogo?</button>
+      <div class="faq-answer">
+        <p>
+          Se recomienda acudir a la primera revisión a partir de los 4-5 años 
+          (siempre y cuando antes no se observe ninguna alteración o molestia en los dientes).
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Si estoy embarazada, ¿puedo realizarme algún tratamiento dental?</button>
+      <div class="faq-answer">
+        <p>
+          El segundo trimestre es el momento en el que se puede realizar algún tratamiento de urgencia, siendo el primer y tercer trimestre los más críticos en cuanto al tratamiento dental. Lo ideal es hablar con el dentista si se está buscando el embarazo 
+          para hacer una revisión dental y si fuera necesario, realizar cualquier tratamiento antes de quedarse en estado.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+  <script>
+  // Lógica para desplegar preguntas frecuentes
+  document.querySelectorAll(".faq-question").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const answer = btn.nextElementSibling;
+      const isOpen = answer.classList.contains("open");
+
+      // Cierra todas las respuestas abiertas
+      document.querySelectorAll(".faq-answer").forEach((a) => a.classList.remove("open"));
+
+      // Si la que tocaste no estaba abierta, la abrimos
+      if (!isOpen) {
+        answer.classList.add("open");
+      }
+    });
+  });
+</script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -157,4 +207,5 @@
     </script>
   </body>
 </html>
+
 
