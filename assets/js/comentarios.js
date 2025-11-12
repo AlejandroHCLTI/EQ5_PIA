@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [
         { nombre: "Alejandro", mensaje: "Excelente atención y resultados.", foto: "assets/img/alejandro.jpeg" },
-        { nombre: "Hector", mensaje: "Muy profesionales y atentos.", foto: "https://i.pravatar.cc/50?img=2" },
+        { nombre: "Hector", mensaje: "Muy profesionales y atentos.", foto: "assets/img/hector.jpeg" },
         { nombre: "Camila", mensaje: "Mi familia y yo estamos muy satisfechos.", foto: "assets/img/camila.jpeg" },
         { nombre: "Samuel", mensaje: "Recomendados al 100%.", foto: "assets/img/samuel.jpeg" },
-        { nombre: "Braulio", mensaje: "Me sentí muy cómoda durante mi tratamiento.", foto: "https://i.pravatar.cc/50?img=5" }
+        { nombre: "Braulio", mensaje: "Me sentí muy cómoda durante mi tratamiento.", foto: "assets/img/braulio.jpeg" }
     ];
 
     if (!localStorage.getItem('comentarios')) {
