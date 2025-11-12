@@ -294,10 +294,15 @@ footer .social a:hover {
 }
 
 /* Modo oscuro completo */
+/* Transición global */
+* {
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Modo oscuro */
 .dark-mode {
     background-color: #000000;
     color: #ffffff;
-    transition: 5s;
 }
 
 .dark-mode header {
@@ -373,6 +378,7 @@ footer .social a:hover {
 .dark-mode footer {
     background-color: #001f3f;
 }
+
 
 p {
     text-align: justify;    
