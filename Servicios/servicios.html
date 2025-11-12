@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Smiley Crown</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F2F2F2;
+      color: #333;
+    }
+
+    header {
+      background-color: #0540F2;
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      text-align: center;
+    }
+
+    header img {
+      width: 80px;
+      height: auto;
+      background-color: white;
+      padding: 8px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav {
+      background-color: #0554F2;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #6B98F2;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #0540F2;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .servicio {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .servicio:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(5, 108, 242, 0.2);
+    }
+
+    .servicio img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+
+    .servicio h3 {
+      color: #056CF2;
+      margin-bottom: 10px;
+    }
+
+    .servicio p {
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .precio {
+      font-weight: bold;
+      color: #0540F2;
+    }
+
+    /* ===== Formulario de Cotización ===== */
+    .cotizacion {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    .cotizacion h3 {
+      color: #0540F2;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+
+    select, input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    .descuentos {
+      margin: 10px 0;
+    }
+
+    .descuentos label {
+      font-weight: normal;
+    }
+
+    button {
+      background-color: #0540F2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+      display: block;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #056CF2;
+    }
+
+    .resultado {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #0540F2;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #0540F2;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/simley crown dentist.png" alt="Logo Smiley Crown Dentist">
+    <h1>Smiley Crown Dental Clinic</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="citas.html">Agendar Cita</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <div class="container">
+    <h2>Nuestros Servicios</h2>
+
+    <div class="servicios">
+      <div class="servicio">
+        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Limpieza dental">
+        <h3>Limpieza Dental</h3>
+        <p>Elimina la placa y el sarro para mantener tus dientes sanos y brillantes 😊</p>
+        <p>Duración: 45 minutos</p>
+        <p class="precio">$400 MXN</p>
+      </div>
+
+      <div class="servicio">
+        <img src="https://cdn-icons-png.flaticon.com/512/2927/2927344.png" alt="Ortodoncia">
+        <h3>Ortodoncia</h3>
+        <p>Corrige la posición de tus dientes y mejora tu sonrisa con brackets o alineadores.</p>
+        <p>Duración: según tratamiento</p>
+        <p class="precio">Desde $1,200 MXN/mes</p>
+      </div>
+
+      <div class="servicio">
+        <img src="https://cdn-icons-png.flaticon.com/512/2927/2927346.png" alt="Blanqueamiento">
+        <h3>Blanqueamiento Dental</h3>
+        <p>Devuelve el brillo natural a tus dientes de manera rápida y segura.</p>
+        <p>Duración: 1 hora</p>
+        <p class="precio">$900 MXN</p>
+      </div>
+
+      <div class="servicio">
+        <img src="https://cdn-icons-png.flaticon.com/512/2927/2927353.png" alt="Extracciones">
+        <h3>Extracciones</h3>
+        <p>Procedimientos seguros y sin dolor para retirar piezas dañadas o retenidas.</p>
+        <p>Duración: 30 minutos</p>
+        <p class="precio">$600 MXN</p>
+      </div>
+
+      <div class="servicio">
+        <img src="https://cdn-icons-png.flaticon.com/512/6194/6194029.png" alt="Implantes dentales sonrisa">
+        <h3>Implantes Dentales</h3>
+        <p>Solución duradera y estética para reemplazar dientes perdidos y devolver tu sonrisa 😁</p>
+        <p>Duración: según evaluación</p>
+        <p class="precio">Desde $10,000 MXN</p>
+      </div>
+
+      <div class="servicio">
+        <img src="https://cdn-icons-png.flaticon.com/512/2927/2927342.png" alt="Chequeos">
+        <h3>Revisiones y Chequeos</h3>
+        <p>Evaluaciones completas para detectar y prevenir problemas bucales a tiempo.</p>
+        <p>Duración: 30 minutos</p>
+        <p class="precio">$300 MXN</p>
+      </div>
+    </div>
+
+    <!-- ===== FORMULARIO DE COTIZACIÓN ===== -->
+    <div class="cotizacion">
+      <h3>🧾 Cotiza tu servicio</h3>
+
+      <label for="servicio">Selecciona un servicio:</label>
+      <select id="servicio">
+        <option value="">-- Elige una opción --</option>
+        <option value="400">Limpieza Dental - $400</option>
+        <option value="1200">Ortodoncia - $1,200</option>
+        <option value="900">Blanqueamiento Dental - $900</option>
+        <option value="600">Extracción - $600</option>
+        <option value="10000">Implante Dental - $10,000</option>
+        <option value="300">Chequeo General - $300</option>
+      </select>
+
+      <label for="cantidad">Cantidad / Sesiones:</label>
+      <input type="number" id="cantidad" min="1" value="1">
+
+      <div class="descuentos">
+        <p><strong>Selecciona un descuento:</strong></p>
+        <label><input type="radio" name="descuento" value="0" checked> Sin descuento</label><br>
+        <label><input type="radio" name="descuento" value="0.10"> 10% descuento</label><br>
+        <label><input type="radio" name="descuento" value="0.20"> 20% descuento</label>
+      </div>
+
+      <button onclick="calcularCotizacion()">Calcular Cotización</button>
+
+      <div class="resultado" id="resultado"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Smiley Crown Dentist | Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    function calcularCotizacion() {
+      const servicio = document.getElementById("servicio").value;
+      const cantidad = parseInt(document.getElementById("cantidad").value);
+      const descuento = parseFloat(document.querySelector('input[name="descuento"]:checked').value);
+      const resultadoDiv = document.getElementById("resultado");
+
+      if (!servicio) {
+        alert("Por favor selecciona un servicio.");
+        return;
+      }
+      if (cantidad < 1) {
+        alert("La cantidad debe ser al menos 1.");
+        return;
+      }
+
+      const subtotal = parseFloat(servicio) * cantidad;
+      const total = subtotal - (subtotal * descuento);
+
+      resultadoDiv.textContent = `💰 Total a pagar: $${total.toFixed(2)} MXN`;
+
+      alert(`Cotización generada:\nSubtotal: $${subtotal.toFixed(2)} MXN\nDescuento: ${(descuento * 100)}%\nTotal: $${total.toFixed(2)} MXN`);
+    }
+  </script>
+</body>
+</html>
