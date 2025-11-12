@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 * {
@@ -8,12 +7,15 @@
     font-family: Arial, sans-serif;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Italianno';
-    size: 30px;
 }
 
+
+h1{
+    color:#006eff;
+    font-size: 30px;
+}
 header {
     position: relative;
     background-color: #F2F2F2; /* color crema */
@@ -47,7 +49,8 @@ header {
     gap: 10px;
 }
 
-.header-buttons button {
+.header-buttons button,
+.header-buttons a {
     padding: 8px 15px;
     font-size: 14px;
     cursor: pointer;
@@ -56,10 +59,39 @@ header {
     background-color: #056CF2; /* azul vibrante */
     color: white;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 
-.header-buttons button:hover {
-    background-color: #0554F2; /* azul medio */
+.header-buttons {
+    display: flex;
+    align-items: center; /* Alinea verticalmente todos los hijos */
+    gap: 10px; /* Espacio entre saludo y botones */
+}
+
+
+/* Saludo de usuario y logout */
+.user-saludo {
+    font-size: 50px;
+    font-weight: bold;
+    color: #056CF2; 
+    font-family: 'Italianno';
+}
+body.dark-mode .user-saludo {
+    color: #f0f0f0;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 10px;
+    left: 150px; /* Ajusta según el largo del saludo */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #f94144;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1000;
 }
 
 /* Menú pegado al carrusel */
@@ -131,6 +163,14 @@ nav {
     color: #006eff; /* azul vibrante */
 }
 
+.fotospacientes {
+width: 100%;
+height: auto;
+border-radius: 10px;
+display: block;
+margin: 0 auto; 
+}
+
 .info-left p, .info-right p {
     margin-bottom: 15px;
     color: #333;
@@ -144,6 +184,7 @@ nav {
     padding: 40px 20px;
     gap: 20px;
     color: #F2F2F2;
+    font-size: 18px;
 }
 
 .schedule {
@@ -154,16 +195,18 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 40px;
 }
 
 .schedule h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 40px;
     color: #0540F2;
 }
 
 .schedule p {
     margin: 5px 0;
-    font-size: 16px;
+    font-size: 30px;
 }
 
 .testimonials {
@@ -330,14 +373,6 @@ footer .social a:hover {
     background-color: #001f3f;
 }
 
-.header-buttons a {
-    background-color: #00bfff;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
+p {
+    text-align: justify;    
 }

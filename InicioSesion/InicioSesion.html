@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - Smiley Crown Dental Clinic</title>
     <link rel="stylesheet" href="assets/login.css">
 </head>
+
 <body>
     <div class="login-container">
         <div class="login-card">
-            <img src="assets/img/logo.png" alt="Logo" class="logo">
+            <img src="img/logo.png" alt="Logo" class="logo">
             <h2>Iniciar Sesión</h2>
             <form action="#" method="post">
                 <div class="input-group">
@@ -22,9 +24,36 @@
                 </div>
                 <button type="submit" class="login-btn">Entrar</button>
             </form>
-            <p class="register-text">¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
-            <a href="index.html" class="back-link">← Volver al inicio</a>
+            <p class="register-text">¿No tienes cuenta? <a href="/Registrar/Registrar.html">Regístrate aquí</a></p>
+            <a href="/index.html" class="back-link">← Volver al inicio</a>
         </div>
     </div>
+    <script>
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+            // Buscar usuario que coincida
+            const usuarioValido = usuarios.find(u => u.email === email && u.password === password);
+
+            if (usuarioValido) {
+                // Guardar usuario activo para mostrar en index
+                localStorage.setItem("usuarioActivo", JSON.stringify(usuarioValido));
+
+                alert(`¡Bienvenido, ${usuarioValido.nombre}!`);
+                // Redirigir al index
+                window.location.href = "/index.html";
+            } else {
+                alert("Correo o contraseña incorrectos. Intenta de nuevo.");
+            }
+        });
+    </script>
+
+
 </body>
+
 </html>
