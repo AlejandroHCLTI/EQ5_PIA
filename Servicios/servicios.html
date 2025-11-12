@@ -185,6 +185,7 @@
   <header>
     <img src="img/simley crown dentist.png" alt="Logo Smiley Crown Dentist">
     <h1>Smiley Crown Dental Clinic</h1>
+    <span id="bienvenida"></span>
   </header>
 
   <nav>
@@ -283,29 +284,40 @@
     <p>© 2025 Smiley Crown Dentist | Todos los derechos reservados</p>
   </footer>
 
+  <!-- ===== SCRIPT ÚNICO ===== -->
   <script>
-    function calcularCotizacion() {
-      const servicio = document.getElementById("servicio").value;
-      const cantidad = parseInt(document.getElementById("cantidad").value);
-      const descuento = parseFloat(document.querySelector('input[name="descuento"]:checked').value);
-      const resultadoDiv = document.getElementById("resultado");
-
-      if (!servicio) {
-        alert("Por favor selecciona un servicio.");
-        return;
-      }
-      if (cantidad < 1) {
-        alert("La cantidad debe ser al menos 1.");
-        return;
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mostrar saludo si hay usuario activo
+      const usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo'));
+      if (usuarioActivo) {
+        const span = document.getElementById('bienvenida');
+        if (span) span.textContent = `Bienvenido, ${usuarioActivo.nombre}`;
       }
 
-      const subtotal = parseFloat(servicio) * cantidad;
-      const total = subtotal - (subtotal * descuento);
+      window.calcularCotizacion = function() {
+        const servicio = document.getElementById("servicio").value;
+        const cantidad = parseInt(document.getElementById("cantidad").value);
+        const descuento = parseFloat(document.querySelector('input[name="descuento"]:checked').value);
+        const resultadoDiv = document.getElementById("resultado");
 
-      resultadoDiv.textContent = `💰 Total a pagar: $${total.toFixed(2)} MXN`;
+        if (!servicio) {
+          alert("Por favor selecciona un servicio.");
+          return;
+        }
+        if (cantidad < 1) {
+          alert("La cantidad debe ser al menos 1.");
+          return;
+        }
 
-      alert(`Cotización generada:\nSubtotal: $${subtotal.toFixed(2)} MXN\nDescuento: ${(descuento * 100)}%\nTotal: $${total.toFixed(2)} MXN`);
-    }
+        const subtotal = parseFloat(servicio) * cantidad;
+        const total = subtotal - (subtotal * descuento);
+
+        resultadoDiv.textContent = `💰 Total a pagar: $${total.toFixed(2)} MXN`;
+
+        alert(`Cotización generada:\nSubtotal: $${subtotal.toFixed(2)} MXN\nDescuento: ${(descuento * 100)}%\nTotal: $${total.toFixed(2)} MXN`);
+      };
+    });
   </script>
 </body>
 </html>
+
