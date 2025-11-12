@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <script src="/assets/js/comentarios.js"></script>
+
     <!-- Header -->
     <header class="header-container">
         <div class="logo-title">
@@ -137,7 +139,21 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
-    <!-- Footer -->
+    <section id="comentarios">
+        <h2>Comentarios de nuestros pacientes</h2>
+
+        <form id="formComentario">
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+            <textarea id="mensaje" placeholder="Escribe tu comentario" required></textarea>
+            <button type="submit">Publicar</button>
+        </form>
+
+        <div id="listaComentarios">
+            <!-- Comentarios aparecerán aquí -->
+        </div>
+    </section>
+
+
     <footer>
         <h2>&copy; 2025 Clínica Smiley Crown. Todos los derechos reservados.</h2>
         <div class="social">
