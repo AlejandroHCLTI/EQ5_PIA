@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { nombre: "Alejandro", mensaje: "Excelente atención y resultados.", foto: "assets/img/alejandro.jpeg" },
         { nombre: "Hector", mensaje: "Muy profesionales y atentos.", foto: "https://i.pravatar.cc/50?img=2" },
         { nombre: "Camila", mensaje: "Mi familia y yo estamos muy satisfechos.", foto: "assets/img/camila.jpeg" },
-        { nombre: "Samuel", mensaje: "Recomendados al 100%.", foto: "https://i.pravatar.cc/50?img=4" },
+        { nombre: "Samuel", mensaje: "Recomendados al 100%.", foto: "assets/img/samuel.jpeg" },
         { nombre: "Braulio", mensaje: "Me sentí muy cómoda durante mi tratamiento.", foto: "https://i.pravatar.cc/50?img=5" }
     ];
 
