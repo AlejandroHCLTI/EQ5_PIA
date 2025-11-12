@@ -297,6 +297,7 @@ footer .social a:hover {
 .dark-mode {
     background-color: #000000;
     color: #ffffff;
+    transition: 5s;
 }
 
 .dark-mode header {
