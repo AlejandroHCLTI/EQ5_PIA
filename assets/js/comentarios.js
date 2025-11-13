@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [
         { nombre: "Alejandro", mensaje: "Excelente atención y resultados.", foto: "assets/img/alejandro.jpeg" },
         { nombre: "Hector", mensaje: "Muy profesionales y atentos.", foto: "assets/img/hector.jpeg" },
-        { nombre: "Camila", mensaje: "Mi familia y yo estamos muy satisfechos.", foto: "assets/img/camila.jpeg" },
+        { nombre: "Camila", mensaje: "Estoy muy satisfecha con los resultados.", foto: "assets/img/camila.jpeg" },
         { nombre: "Samuel", mensaje: "Recomendados al 100%.", foto: "assets/img/samuel.jpeg" },
-        { nombre: "Braulio", mensaje: "Me sentí muy cómoda durante mi tratamiento.", foto: "assets/img/braulio.jpeg" }
+        { nombre: "Braulio", mensaje: "Me sentí muy cómodo durante mi tratamiento.", foto: "assets/img/braulio.jpeg" }
     ];
 
     if (!localStorage.getItem('comentarios')) {
