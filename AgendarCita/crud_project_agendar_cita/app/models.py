@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.exceptions import ValidationError
-import datetime
+from datetime import date, datetime
 
 class Cita(models.Model):
 
@@ -34,6 +34,10 @@ class Cita(models.Model):
 
         dia_semana = self.fecha.weekday()  # 0=Lunes, 6=Domingo
 
+        if self.fecha < date.today():
+            raise ValidationError("⚠️ No se pueden agendar citas en días pasados.")
+
+        
         # No permitir domingos
         if dia_semana >= 6:
             raise ValidationError("⚠️ No se pueden agendar citas en domingo.")
@@ -52,3 +56,4 @@ class Cita(models.Model):
 
     def __str__(self):
         return f"{self.nombre} - {self.fecha} {self.hora}"
+
