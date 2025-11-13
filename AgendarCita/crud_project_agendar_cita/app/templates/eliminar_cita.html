@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Cita</title>
+</head>
+<body style="font-family:'Poppins',sans-serif; text-align:center;">
+    <h2>¿Estás seguro que quieres eliminar esta cita?</h2>
+    <p><strong>{{ cita.nombre }}</strong> - {{ cita.fecha }} {{ cita.hora }}</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" style="background-color:red; color:white; padding:10px 15px; border:none; border-radius:5px;">Sí, eliminar</button>
+        <a href="{% url 'lista_citas' %}" style="margin-left:15px;">Cancelar</a>
+    </form>
+</body>
+</html>
